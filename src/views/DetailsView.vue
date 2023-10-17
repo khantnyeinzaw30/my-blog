@@ -1,7 +1,13 @@
 <template>
-  <div class="post">
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.body }}</p>
+  <div class="post" v-if="post">
+    <h2>{{ post.title }} - {{ post.author }}</h2>
+    <p>{{ post.summary }}</p>
+    <h5>Comments</h5>
+    <ul>
+      <li v-for="comment in post.comments" :key="comment.id">
+        {{ comment.comment_text }} By {{ comment.commenter_name }}
+      </li>
+    </ul>
   </div>
 </template>
 

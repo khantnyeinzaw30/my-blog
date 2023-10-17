@@ -1,4 +1,5 @@
 import { ref } from "@vue/reactivity";
+import axios from "axios";
 
 const getPosts = () => {
   const posts = ref([]);
@@ -6,11 +7,11 @@ const getPosts = () => {
 
   const load = async () => {
     try {
-      let data = await fetch("http://localhost:3000/posts");
-      if (!data.ok) {
+      let data = await axios.get("/api/movies");
+      if (data.statusText !== "OK") {
         throw Error("no data available");
       }
-      posts.value = await data.json();
+      posts.value = data.data;
     } catch (err) {
       error.value = err.message;
     }
