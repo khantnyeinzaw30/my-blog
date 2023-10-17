@@ -7,22 +7,22 @@
 </template>
 
 <script>
-// import { onMounted, onUnmounted, onUpdated } from "@vue/runtime-core";
+import { onMounted } from "@vue/runtime-core";
 import SinglePost from "./SinglePost.vue";
 export default {
   props: ["posts"],
   components: { SinglePost },
-  //   setup() {
-  //     // console.log(props.posts);
-  //     onMounted(() => {
-  //       console.log("element is mounted");
-  //     });
-  //     onUnmounted(() => {
-  //       console.log("element is unmounted");
-  //     });
-  //     onUpdated(() => {
-  //       console.log("element is updated");
-  //     });
-  //   },
+  setup(props) {
+    // console.log(props.posts);
+    onMounted(() => {
+      console.log(props.posts);
+    });
+    // onUnmounted(() => {
+    //   console.log("element is unmounted");
+    // });
+    // onUpdated(() => {
+    //   console.log("element is updated");
+    // });
+  },
 };
 </script>
