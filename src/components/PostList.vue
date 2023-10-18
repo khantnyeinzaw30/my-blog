@@ -7,16 +7,15 @@
 </template>
 
 <script>
-import { onMounted } from "@vue/runtime-core";
+// import { onMounted } from "@vue/runtime-core";
 import SinglePost from "./SinglePost.vue";
 export default {
   props: ["posts"],
   components: { SinglePost },
-  setup(props) {
-    // console.log(props.posts);
-    onMounted(() => {
-      console.log(props.posts);
-    });
+  setup() {
+    // onMounted(() => {
+    //   console.log(props.posts);
+    // });
     // onUnmounted(() => {
     //   console.log("element is unmounted");
     // });

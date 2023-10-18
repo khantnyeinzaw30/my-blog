@@ -4,6 +4,8 @@ import router from "./router";
 // import * as Vue from "vue"; // in Vue 3
 import axios from "axios";
 import VueAxios from "vue-axios";
+// import bootstrap;
+import "bootstrap/dist/css/bootstrap.min.css";
 
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = false;
